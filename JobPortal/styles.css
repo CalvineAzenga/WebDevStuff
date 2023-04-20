@@ -1,0 +1,282 @@
+@font-face {
+    font-family: 'SourceSansProRegular';
+    src: url('./assets/fonts/SourceSansPro-Regular-webfont.185ff557118a.ttf');
+    font-weight: normal;
+    font-style: normal; }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font-family: "SourceSansProRegular";
+    --outer-shadow: 3px 3px 3px #d0d0d0,-3px -3px 3px #f8f8f8;
+    --outer-shadow-0: 0 0 0 #d0d0d0,0 0 0 #f8f8f8;
+    --inner-shadow: inset 3px 3px 3px #d0d0d0,inset -3px -3px 3px #f8f8f8;
+    --back-color: #EFF0F4;
+    --text-color:#333;
+}
+.main{
+    display: grid;
+    background-color: var(--back-color);
+    grid-template-columns: 15% 60% 25%;
+}
+.main nav ul .list-item a{
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-size: 1.2em;
+    color: var(--text-color);
+}
+.main nav ul .list-item{
+    position: relative;
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-size: 1.1em;
+    padding: 7px;
+    border-radius: 10px;
+    margin-top: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: var(--outer-shadow);
+}
+
+.main nav ul .list-item .sub-list{
+    position: absolute;
+    left: calc(100% - 8%);
+    top: 0;
+    background-color: var(--back-color);
+    padding: 20px;
+    margin-left: 20px;
+    list-style: none;
+    box-shadow: var(--outer-shadow);
+    border-radius: 0 15px 15px 15px;
+    width: max-content;
+    z-index: 100;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    font-size: .8em;
+}
+.main nav ul .list-item:focus-within .sub-list{
+    display: inline;
+    visibility: visible;
+    opacity: 1;
+}
+.main nav ul .list-item .sub-list li{
+    margin-top: 10px;
+    padding: 7px;
+    box-shadow: var(--outer-shadow);
+    border-radius: 10px;
+}
+.main nav ul .list-item .sub-list a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+.main-content{
+    box-shadow: var(--inner-shadow);
+    background-color: var(--back-color);
+    padding: 10px;
+    font-family: var(--font-family);
+    font-size: 1.1em;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.main-content-data{
+    display: flex;
+    flex-direction: column;
+}
+.main-content .top-bar .top-nav{
+    position: relative;
+    box-shadow: var(--outer-shadow);
+    text-align: center;
+    background-color: beige;
+}
+.main-content .top-bar .top-nav .search-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    border-radius: 15px;
+    margin: 10px;
+    background-color: var(--back-color);
+    color: grey;
+    box-shadow: var(--outer-shadow);
+}
+.main-content .top-bar .top-nav .search-box input{
+    background-color: rgb(248, 248, 246);
+    font-size: 1em;
+    font-family: var(--font-family);
+    outline: none;
+    border-radius: 15px;
+    margin: 3px;   
+    border: 1px solid #dfdfdf;
+    padding: 10px;
+}
+.main-content .top-bar .top-nav .search-box span{
+    padding-right: 10px;
+}
+
+.main-content .top-bar .top-nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .9em;
+}
+.main-content .top-bar .top-nav ul li{
+    list-style: none;
+    padding: 10px;
+}
+.main-content .top-bar .top-nav ul li a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+.main-content .top-bar .top-nav ul li:not(:last-child){
+    border-right: 1px solid silver;
+}
+.filter-bar{
+    font-family: var(--font-family);
+    font-size: 1em;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.filter-bar .filter-items{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.filter-bar .filter-items .filter-item{
+    padding: 5px;
+    margin: 5px;
+}
+.filter-bar .filter-items .filter-item select{
+    padding: 5px;
+    font-size: .8em;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: rgb(3, 26, 3);
+}
+.jobs-pane{
+    margin-top: 50px;
+    font-family: var(--font-family);
+    font-size: .9em;
+}
+.company-details .logo{
+    display: inline-flex;
+    /* justify-content: space-around; */
+}
+.company-details .logo h2{
+    padding: 5px;
+    color: var(--text-color);
+}
+
+.jobs-pane .job-box{
+    /* box-shadow: var(--outer-shadow); */
+    margin: 20px;
+    margin-top: 20px;
+}
+.job-box .job-desc{
+    margin-left: 60px;
+    padding: 10px;
+}
+.job-abouts{
+    margin-top: 10px;
+}
+.job-abouts ul{
+    list-style: none;
+    display: inline-flex;
+    font-size: .8em;
+    font-weight: bold;
+    color: var(--text-color);
+}
+.job-abouts ul li{
+    box-shadow: var(--outer-shadow);
+    padding: 5px;
+    margin-left: 10px;
+}
+.job-abouts ul li a{
+    text-decoration: none;
+    color: green;
+}
+
+
+
+.left-box{
+    min-height: 100vh;
+}
+
+.right-box .form{
+    display: block;
+    text-align: center;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: var(--outer-shadow);
+    font-family: var(--font-family);
+    font-size: 1em;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+.right-box .form input{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 8px;
+    font-family: var(--font-family);
+    font-size: 1em;
+    text-align: left;
+}
+.right-box .form .input{
+    text-align: left;
+    box-shadow: var(--inner-shadow);
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 15px;
+    color: gray;
+    margin: 10px;
+}
+.right-box .form input[type='submit']{
+    box-shadow: var(--outer-shadow);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px;
+    color: royalblue;
+    font-weight: bold;
+    cursor: pointer;
+}
+.right-box .signup{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+.right-box a{
+    text-decoration: none;
+    color: royalblue;
+}
+.right-box .forgot-pass a{
+    float: right;
+}
+.right-box .form p:first-child{
+    box-shadow: var(--outer-shadow);
+    border-radius: 15px;
+    width: 50%;
+    margin-left: 25%;
+    font-size: 1.5em;
+    color: var(--text-color);
+    padding: 10px;
+}
+.darklightmode{
+    position: absolute;
+    left: 10px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: var(--text-color);
+}
+a{
+    color: var(--text-color);
+}
